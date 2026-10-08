@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>🛍️ Product Catalog</h1>
+            <p>Explore products powered by a REST API</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="controls">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+            </select>
+
+            <button onclick="loadProducts()">Refresh</button>
+        </section>
+
+        <div id="loading" class="loading">
+            Loading products...
+        </div>
+
+        <div id="error" class="error"></div>
+
+        <section id="productContainer" class="product-grid"></section>
+
+    </main>
+
+    <footer>
+        <p>API-Backed Product Catalog © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
